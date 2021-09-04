@@ -536,7 +536,7 @@ function SetupM1()
     local health = getDifValueDESC(130000)+20000;
     local armies = ListArmies();
     ScenarioFramework.SetArmyColor(table.getn(armies) - 1, 16,16,16);
-    ScenarioFramework.SetArmyColor(table.getn(armies), 232, 10, 10);
+    ScenarioFramework.SetArmyColor(table.getn(armies), 255, 23, 68);
     ScenarioInfo.DefenseObject = CreateUnitHPR( "uec1901", ARMY_HQ, pos[1], pos[2], pos[3], 0,0,0);
     ScenarioInfo.DefenseObject:SetReclaimable(false);
     ScenarioInfo.DefenseObject:SetCapturable(false);
