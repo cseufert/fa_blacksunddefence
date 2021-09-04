@@ -534,6 +534,9 @@ function SetupM1()
     local pos = GetMarkerPos(DEFENSE_MARK);
     local difficulty = ScenarioInfo.Options.difficultyAdjustment;
     local health = getDifValueDESC(130000)+20000;
+    local armies = ListArmies();
+    ScenarioFramework.SetArmyColor(table.getn(armies) - 1, 16,16,16);
+    ScenarioFramework.SetArmyColor(table.getn(armies), 232, 10, 10);
     ScenarioInfo.DefenseObject = CreateUnitHPR( "uec1901", ARMY_HQ, pos[1], pos[2], pos[3], 0,0,0);
     ScenarioInfo.DefenseObject:SetReclaimable(false);
     ScenarioInfo.DefenseObject:SetCapturable(false);
@@ -550,7 +553,7 @@ function SetupM1()
     end
     
     -- Let the players and the enemy know where Black Sun is
-    for i, army in ListArmies() do
+    for i, army in armies do
         local VisMarker = ScenarioFramework.CreateVisibleAreaLocation( 90, pos, 0, GetArmyBrain(army) )
     end 
 
