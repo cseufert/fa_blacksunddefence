@@ -555,11 +555,11 @@ function SetupM1()
     end 
 
     -- set score calculation to show total kills
-    for index, brain in ArmyBrains do
-        brain.CalculateScore = function(thisBrain)
-            return GetKillsByBrain(thisBrain) + killCount[GetArmyNameByBrain(thisBrain)]*1000;
-        end
-    end
+    -- for index, brain in ArmyBrains do
+    --     brain.CalculateScore = function(thisBrain)
+    --         return GetKillsByBrain(thisBrain) + killCount[GetArmyNameByBrain(thisBrain)]*1000;
+    --     end
+    -- end
 
     DisplayM1Intro();
 
